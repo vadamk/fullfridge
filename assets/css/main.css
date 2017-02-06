@@ -105,6 +105,7 @@ h4 {
 	.btn:focus,
 	.btn:active,
 	.btn:hover {
+		display: inline-block;
 		padding: 15px 60px;
 		color: #fff;
 		font-weight: 600;

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Full fridge</title>
+<meta name="description" content="">
+
+<link rel="shortcut icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="assets/img/favicon/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-touch-icon-114x114.png">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600&amp;subset=cyrillic-ext" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/media.css">
+
+</head>
+
+<body>
+
+<div id="wrap">
+	
+	<div class="top-line container-fluid">
+		<div class="container">
+			<a href="#" class="logo img-responsive pull-left">
+				<img src="assets/images/logo.svg" alt="">
+			</a>
+			<button class="btn pull-right hidden-xs" type="button" data-toggle="modal" data-target="#ModalForm" onclick="changeFormTypeValue('top_line')">Замовити доставку</button>
+			<div class="phone-number pull-right hidden hidden-xs">
+				<span>+38 (063) 170 47 05</span>
+			</div>
+		</div>
+	</div><!-- top-line -->
+
+	<header class="container-fluid text-center">
+		<h1>Наповнимо <br class="hidden-xs">ваш холодильник</h1>
+		<h3>Доставка персональних наборів продуктів <br class="hidden-xs">
+		харчування на цілий тиждень</h3>
+		<button class="btn">Підібрати меню</button>
+		<button class="btn btn-clear" href="#gains">Дізнатись більше <i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+	</header>
+	
+	<main>
+
+		<section class="container-fluid" id="gains">
+			<div class="container">
+				<div class="row">
+					<div class="img-container hidden-xs col-md-6">
+						<img src="assets/images/product.jpg" class="img-responsive" alt="Full fridge: Прямуй до довершеності. Не витрачай свій час на зайве.">
+					</div>
+					<div class="col-md-6">
+						<h2>Прямуй до довершеності. <br> <small>Не витрачай свій час на зайве.</small></h2>
+						<ul class="gains-list">
+							<li>Звільни голову від клопоту</li>
+							<li>Економ 8-10 годин на тиждень</li>
+							<li>Харчуйся смачно та по домашньому</li>
+							<li>Витрачай час на важливіші справи</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section><!-- End #gains -->
+
+		<div class="bg-gray container-fluid">
+			<section class="container" id="poll">
+				<h2 class="text-center">Дайте собі відповідь на запитання:</h2>
+				<ol class="poll-list col-md-8 col-md-offset-2">
+					<li>
+						<h3>Чи подобається вам слідкувати за тим, щоб ваш холодильник не був порожнім?</h3>
+						<ol class="poll-sublist">
+							<li>Не зовсім... Є більш захоплюючі речі.</li>
+							<li>Обожнюю ходити в магазин після важкого робочого дня.</li>
+						</ol>
+					</li>
+					<li>
+						<h3>Сьогодні час - це гроші. Яку цінність має година вашого часу?</h3>
+						<p class="text-center text-gray">(500-700$ на міс. - приблизно 100грн. годину) </p>
+						<p><b>Допишіть 0 до цієї цифри</b> і дізнаєтесь скільки ТИСЯЧ гривень коштує “задоволення” від поїздок в супермаркети та магазини, адже в середньому ми витрачаємо на це 8-10 год. в тиждень.</p>
+					</li>
+					<li>
+						<h3>Чи є у вас справи якими приємно займатись, але на які часто не вистачає часу?</h3>
+						<h4>Наприклад:</h4>
+						<ul class="poll-sublist">
+							<li>Сходити на футбол, у спортзал, в кіно</li>
+							<li>Сходити на побачення чи зустрітися з друзями</li>
+							<li>Сходити в салон краси, на масаж, на йогу</li>
+							<li>Розслабитись чи помедитувати</li>
+							<li>Просто почитати книгу чи пограти у відео-ігри</li>
+							<li>Вивчити іноземну мову</li>
+							<li>І так далі...</li>
+						</ul>
+					</li>
+				</ol>
+			</section><!-- End #pull -->
+		</div>
+			
+		<section class="container" id="products">
+			<h2 class="text-center">Які продукти ми доставдляємо?</h2>
+			<ul class="products-list col-md-10 col-md-offset-1">
+				<li class="col-md-6">
+					<div class="img-container">
+						<img class="img-responsive" src="assets/images/products/steak.svg" alt="Full fridge: Які продукти ми доставдляємо? - М'ясо і риба">
+					</div>
+					<div class="txt-container">
+						<h3>М'ясо і риба</h3>
+						<p>Приїде охолодженим - потрібно зберігати в морозилці</p>
+					</div>
+				</li>
+				<li class="col-md-6">
+					<div class="img-container">
+						<img class="img-responsive" src="assets/images/products/milk.svg" alt="Full fridge: Які продукти ми доставдляємо? - Молочні продукти">
+					</div>
+					<div class="txt-container">
+						<h3>Молочні продукти</h3>
+						<p>У заводських упаковках, з терміном придатності на тиждень</p>
+					</div>
+				</li>
+				<li class="col-md-6">
+					<div class="img-container">
+						<img class="img-responsive" src="assets/images/products/grain.svg" alt="Full fridge: Які продукти ми доставдляємо? - Крупи">
+					</div>
+					<div class="txt-container">
+						<h3>Крупи</h3>
+						<p>Щедрі порції для гарнірів, щоб ніхто не пішов голодним</p>
+					</div>
+				</li>
+				<li class="col-md-6">
+					<div class="img-container">
+						<img class="img-responsive" src="assets/images/products/apple.svg" alt="Full fridge: Які продукти ми доставдляємо? - Фрукти і овочі">
+					</div>
+					<div class="txt-container">
+						<h3>Фрукти і овочі</h3>
+						<p>Свіжі сезонні - від яблук до капусти. А також заморожені - брокколі, гриби, т. д.</p>
+					</div>
+				</li>
+				<li class="col-md-6">
+					<div class="img-container">
+						<img class="img-responsive" src="assets/images/products/cupcake.svg" alt="Full fridge: Які продукти ми доставдляємо? - Десерти">
+					</div>
+					<div class="txt-container">
+						<h3>Десерти</h3>
+						<p>Свіже домашнє печиво і фірмові мюслі від бренд-шефа. <i>Приїдуть вже готовими</i></p>
+					</div>
+				</li>
+				<li class="col-md-6">
+					<div class="img-container">
+						<img class="img-responsive" src="assets/images/products/spices.svg" alt="Full fridge: Які продукти ми доставдляємо? - Соуси і спеції">
+					</div>
+					<div class="txt-container">
+						<h3>Соуси і спеції</h3>
+						<p>Ретельно відведені рівно для вашого страви. Для рецептів з усього світу!</p>
+					</div>
+				</li>
+			</ul>
+			<div class="col-md-6 col-md-offset-3" style="margin-top: 30px; margin-bottom: 30px;">
+				<h4 class="text-center">Усі продукти доставляються свіжими і мають термін придатності принаймні 1 тиждень.</h4>
+			</div>
+		</section><!-- End products -->
+
+		<div class="container-fluid" id="cost">
+			<div class="row">
+				<section class="container">
+					<h2 class="text-center">Скільки це коштує?</h2>
+					<ul class="cost-list text-center col-md-10 col-md-offset-1">
+						<li class="col-md-4">
+							<div class="cost-item">
+								<span>450 ₴</span>
+								<h3>Пробна доставка</h3>
+								<p>Їжі вистачить на 3 дні</p>
+								<button class="btn" type="button" data-toggle="modal" data-target="#ModalForm" onclick="changeFormTypeValue('try')">Спробувати</button>
+							</div>
+						</li>
+						<li class="col-md-4">
+							<div class="cost-item">
+								<span>1250 ₴</span>
+								<h3>Стандартний набір</h3>
+								<p>Їжі вистачить на тиждень.</p>
+								<button class="btn" type="button" data-toggle="modal" data-target="#ModalForm" onclick="changeFormTypeValue('default')">Дізнатись меню</button>
+							</div>
+						</li>
+						<li class="col-md-4">
+							<div class="cost-item">
+								<span class="img-container">
+									<img src="assets/images/settings.svg" class="img-responsive" alt="Full fridge: Персональний набір">
+								</span>
+								<h3>Персональний набір</h3>
+								<p style="line-height: 24px">Оберіть лише ті продукти, які вам потрібно.</p>
+								<button class="btn" type="button" data-toggle="modal" data-target="#ModalForm" onclick="changeFormTypeValue('custom')">Зв'язатися з нами</button>
+							</div>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<section class="bg-gray container-fluid" id="responds">
+			<h2 class="text-center">Вже користуються нашими послугами</h2>
+			<div class="row">
+				<ul class="container responds-list">
+					<li class="col-md-4">
+						<div class="respond-item">
+							<div class="img-container">
+								<img src="assets/images/responds/andrew.jpg" class="img-responsive" alt="Full fridge: Відгуки - Андрій">
+							</div>
+							<h3 class="text-center">Лише вечері *<br>
+							1 людина</h3>
+							<p class="text-center">Андрій Прокопчук (підприємець)<br>
+							<a href="https://www.facebook.com/sergeevichdron?fref=ts" target="_blank">FB</a></p>
+							<p><i>"Так як я холостяк, питання харчування для мене було непотрібним головним болем. ..."</i></p>
+						</div>
+					</li>
+					<li class="col-md-4">
+						<div class="respond-item">
+							<div class="img-container">
+								<img src="assets/images/responds/oksana.jpg" class="img-responsive" alt="Full fridge: Відгуки - Андрій">
+							</div>
+							<h3 class="text-center">Триразове харчування *<br>
+							2 людини</h3>
+							<p class="text-center">Оксана Хуторцова (лікар)<br>
+							<a href="https://www.facebook.com/oksana.hutortsova?fref=ts" target="_blank">FB</a></p>
+							<p><i>"Так як я холостяк, питання харчування для мене було непотрібним головним болем. ..."</i></p>
+						</div>
+					</li>
+					<li class="col-md-4">
+						<div class="respond-item">
+							<div class="img-container">
+								<img src="assets/images/responds/yulia.jpg" class="img-responsive" alt="Full fridge: Відгуки - Андрій">
+							</div>
+							<h3 class="text-center">Сніданки та вечері *<br>
+							1 людина</h3>
+							<p class="text-center">Юлия Сологуб (менеджер)<br>
+							<a href="https://www.facebook.com/ula.hytortsova.1?pnref=lhc.friends" target="_blank">FB</a></p>
+							<p><i>"Так як я холостяк, питання харчування для мене було непотрібним головним болем. ..."</i></p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="container" id="faq">
+			<h2 class="text-center">Відповіді на поширені питання</h2>
+			<ol class="faq-list col-md-8 col-md-offset-2">
+				<li>
+					<a data-toggle="collapse" href="#faq1">
+						<span>Як працює доставка?</span>
+						<div class="close-icon">
+							<img src="assets/images/cancel.svg" class="img-responsive" alt="Full Fridge: cancel">
+						</div>
+					</a>
+					<div class="panel-collapse collapse" id="faq1">
+						<div class="txt-container">
+							<p>На разі доставка відбувається у вихідні дні з 10:00 до 16:00, попередньо узгодивши час.</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a data-toggle="collapse" href="#faq2">
+						<span>Що робити, якщо я не їм деякі продукти?</span>
+						<div class="close-icon">
+							<img src="assets/images/cancel.svg" class="img-responsive" alt="Full Fridge: cancel">
+						</div>
+					</a>
+					<div class="panel-collapse collapse" id="faq2">
+						<div class="txt-container">
+							<p>Персональна їжа - це коли ми не тільки ходимо за вас в магазин і чистимо картоплю, а й підбираємо меню, яке буде смачним саме для вас.</p>
+
+							<p>Як це працює: <br>
+							1) Ви вказуєте, які продукти ви не їсте <br>
+							2) Ми підбираємо вам меню і можливу дату доставки <br>
+							3) Ви пробуєте і даєте нам зворотний зв'язок</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a data-toggle="collapse" href="#faq3">
+						<span>Як дізнатися меню?</span>
+						<div class="close-icon">
+							<img src="assets/images/cancel.svg" class="img-responsive" alt="Full Fridge: cancel">
+						</div>
+					</a>
+					<div class="panel-collapse collapse" id="faq3">
+						<div class="txt-container">
+							<p><a href="#">Зареєстріруйтеся тут</a>, і ми відправимо актуальне меню вам на пошту.</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a data-toggle="collapse" href="#faq4">
+						<span>Що повинно бути вдома?</span>
+						<div class="close-icon">
+							<img src="assets/images/cancel.svg" class="img-responsive" alt="Full Fridge: cancel">
+						</div>
+					</a>
+					<div class="panel-collapse collapse" id="faq4">
+						<div class="txt-container">
+							<p>Тільки найпростіше: <br>
+							- Базові інгредієнти: цукор, сіль, перець, олія, вода <br>
+							- Посуд: глибока сковорода, велика каструля<br>
+							- Духовка і деко - можна, але не обов'язково</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a data-toggle="collapse" href="#faq5">
+						<span>Як і скільки зберігати продукти?</span>
+						<div class="close-icon">
+							<img src="assets/images/cancel.svg" class="img-responsive" alt="Full Fridge: cancel">
+						</div>
+					</a>
+					<div class="panel-collapse collapse" id="faq5">
+						<div class="txt-container">
+							<p>У холодильнику, в морозилці і на полиці. Деякі продукти потрібно буде приготувати протягом 3-ох днів після доставки, але більшість можна зберігати набагато довше.</p>
+						</div>
+					</div>
+				</li>
+			</ol>
+		</div>
+			
+	</main>
+
+	<footer id="footer" class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<ul class="contacts-list">
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Vkontakte</a></li>
+						<li></li>
+						<li>+38 (063) 170 47 05</li>
+						<li><a href="mailto:support@fullfridge.com.ua">support@fullfridge.com.ua</a></li>
+					</ul>
+				</div>
+				<div class="col-md-6">
+					<div class="footer-form">
+						<h3>Залишились запитання?</h3>
+						<p class="text-gray">Залиште ваш номер телефону, і ми зв'яжемось з вами найближчим часом</p>
+						<form action="mail.php">
+							<input type="phone" placeholder="Номер телефону *" required>
+							<textarea name="message" placeholder="Запитання"></textarea>
+							<button class="btn" type="submit">Задати питання</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</div>
+
+<!-- <div class="hidden"> -->
+	<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="ModalForm">
+		<div class="form-modal modal-dialog modal-md">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3>Оформлення доставки</h3>
+			<p class="text-gray">Залиште ваші дані, і ми зв'яжемось з вами найближчим часом</p>
+			<form action="mail.php">
+				<input type="text" name="name" placeholder="Ім'я' *" required>
+				<input type="phone" name="phone" placeholder="Номер телефону *" required>
+				<input type="email" name="email" placeholder="Email">
+				<textarea name="message" placeholder="Короткий опис"></textarea>
+				<input type="text" name="type" class="hidden" value="" id="ModalFormType">
+				<button class="btn" type="submit">Задати питання</button>
+			</form>
+		</div>
+	</div>
+<!-- </div> -->
+
+<div class="loader">
+	<div class="loader_inner"></div>
+</div>
+
+<!--[if lt IE 9]>
+<script src="bower_components/html5shiv/es5-shim.min.js"></script>
+<script src="bower_components/html5shiv/html5shiv.min.js"></script>
+<script src="bower_components/html5shiv/html5shiv-printshiv.min.js"></script>
+<script src="bower_components/respond/dest/respond.min.js"></script>
+<![endif]-->
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

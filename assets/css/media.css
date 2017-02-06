@@ -1,0 +1,152 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	
+	h1 {
+		font-size: 32px;
+	}
+
+	h2 {
+		font-size: 28px !important;
+		line-height: 42px;
+	}
+
+	header {
+		padding: 90px 0 30px;
+	}
+
+	#gains {
+		padding: 30px 15px;
+	}
+
+	#gains h2 {
+		margin: 0;
+		text-align: center !important;
+	}
+
+	#gains h2 small {
+		text-align: center !important;
+		font-size: 24px;
+	}
+
+	.gains-list {
+		margin-top: 20px;
+	}
+
+	.gains-list li {
+		list-style-position: outside;
+	}
+
+	/* cost */
+
+	.cost-list .btn {
+		width: 100%;
+	}
+
+	.cost-item p {
+		line-height: 24px;
+	}
+
+	/* responds */
+
+	.responds-list li {
+		padding-top: 60px;
+	}
+
+	/* faq */
+
+	.faq-list li span {
+		display: inline-block;
+		width: calc(100% - 64px);
+	}
+
+	/* footer */
+
+	footer {
+		padding-bottom: 0;
+	}
+
+	.contacts-list li {
+		text-align: center;
+		font-size: 20px;
+	}
+
+	.footer-form {
+		float: none;
+		margin: 20px -30px 0;
+		width: calc(100% + 60px);
+		max-width: calc(100% + 60px);
+	}
+
+	/*Disable Animation on Mobile Devices*/
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

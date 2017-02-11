@@ -3,10 +3,32 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
 
+	header {
+		background-attachment: scroll;
+	}
+
+	#cost {
+		background-attachment: scroll;
+	}
+
+	.what-item {
+		padding: 0 30px;
+	}
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+
+
+	/* cost */
+
+	.cost-list .btn {
+		width: 100%;
+	}
+
+	.cost-item p {
+		line-height: 24px;
+	}
 
 }
 
@@ -30,34 +52,20 @@
 		padding: 30px 15px;
 	}
 
-	#gains h2 {
-		margin: 0;
-		text-align: center !important;
+	#gains .txt-container p {
+		font-size: 18px;
 	}
 
-	#gains h2 small {
-		text-align: center !important;
-		font-size: 24px;
+	/* products */
+
+	.products-list li {
+		overflow: hidden;
 	}
 
-	.gains-list {
-		margin-top: 20px;
+	.products_fresh h4 {
+		font-size: 20px;
 	}
-
-	.gains-list li {
-		list-style-position: outside;
-	}
-
-	/* cost */
-
-	.cost-list .btn {
-		width: 100%;
-	}
-
-	.cost-item p {
-		line-height: 24px;
-	}
-
+	
 	/* responds */
 
 	.responds-list li {
@@ -69,6 +77,24 @@
 	.faq-list li span {
 		display: inline-block;
 		width: calc(100% - 64px);
+		font-size: 20px;
+	}
+
+	.faq-list li .txt-container p {
+		font-size: 16px;
+	}
+
+	/* try */
+
+	#TryForm {
+		margin: 0 auto;
+		padding: 0 15px;
+		max-width: 360px;
+	}
+
+	#TryForm .btn,
+	#TryForm input {
+		width: 100%;
 	}
 
 	/* footer */
@@ -77,16 +103,30 @@
 		padding-bottom: 0;
 	}
 
+	.contacts-list {
+		position: relative;
+	}
+
 	.contacts-list li {
 		text-align: center;
 		font-size: 20px;
 	}
 
-	.footer-form {
+	#FooterForm {
 		float: none;
-		margin: 20px -30px 0;
+		margin: 20px auto;
 		width: calc(100% + 60px);
-		max-width: calc(100% + 60px);
+		max-width: 360px;
+		border-radius: 0;
+	}
+
+	.footer-form {
+	}
+
+	.form-modal {
+		padding: 30px;
+		border-radius: 5px;
+		background: #fff;
 	}
 
 	/*Disable Animation on Mobile Devices*/
@@ -116,6 +156,9 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 
+	#FooterForm {
+		margin: 20px -30px 0;
+	}
 }
 
 /* Custom, iPhone Retina */

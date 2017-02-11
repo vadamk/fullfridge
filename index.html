@@ -8,7 +8,7 @@
 
 <meta charset="utf-8">
 
-<title>Full fridge</title>
+<title>Full fridge: Регулярна доставка продуктів харчування</title>
 <meta name="description" content="">
 
 <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
@@ -35,46 +35,40 @@
 	
 	<div class="top-line container-fluid">
 		<div class="container">
-			<a href="#" class="logo img-responsive pull-left">
-				<img src="assets/images/logo.svg" alt="">
+			<a href="#" class="logo pull-left">
+				<img class="img-responsive" src="assets/images/logo.svg" alt="">
 			</a>
-			<button class="btn pull-right hidden-xs" type="button" data-toggle="modal" data-target="#ModalForm" onclick="changeFormTypeValue('top_line')">Замовити доставку</button>
-			<div class="phone-number pull-right hidden hidden-xs">
-				<span>+38 (063) 170 47 05</span>
+			<button class="btn pull-right hidden-xs" type="button" data-toggle="modal" data-target="#ModalForm" onclick="changeFormTypeValue('top_line')">Замовити дзвінок</button>
+			<div class="phone-number pull-right hidden-xs">
+				<!-- <span>(068) 460 45 96</span> -->
 			</div>
 		</div>
 	</div><!-- top-line -->
 
 	<header class="container-fluid text-center">
 		<h1>Наповнимо <br class="hidden-xs">ваш холодильник</h1>
-		<h3>Доставка персональних наборів продуктів <br class="hidden-xs">
-		харчування на цілий тиждень</h3>
-		<button class="btn">Підібрати меню</button>
+		<h3>Регулярна доставка продуктів харчування</h3>
+		<h3>м. Львів</h3>
+		<button class="btn" type="button" data-toggle="modal" data-target="#ModalForm" onclick="changeFormTypeValue('header')">Замовити доставку</button>
 		<a class="btn btn-clear" href="#gains">Дізнатись більше <i class="fa fa-arrow-down" aria-hidden="true"></i></a>
 	</header>
 	
 	<main>
-
-		<section class="container-fluid" id="gains">
+		<section class="bg-gray text-center container-fluid" id="gains">
 			<div class="container">
 				<div class="row">
-					<div class="img-container hidden-xs col-md-6">
-						<img src="assets/images/product.jpg" class="img-responsive" alt="Full fridge: Прямуй до довершеності. Не витрачай свій час на зайве.">
+					<div class="txt-container col-md-10 col-md-offset-1">
+						<h2>Ми знаємо, ви зайнята людина</h2>
+						<p>Тому ми вирішили подбати про ваше меню та походи в продуктові магазини, щоб ви мали час займатися важливішими справами і при цьому харчувалися смачно та по-домашньому.</p>
 					</div>
-					<div class="col-md-6">
-						<h2>Прямуй до довершеності. <br> <small>Не витрачай свій час на зайве.</small></h2>
-						<ul class="gains-list">
-							<li>Звільни голову від клопоту</li>
-							<li>Економ 8-10 годин на тиждень</li>
-							<li>Харчуйся смачно та по домашньому</li>
-							<li>Витрачай час на важливіші справи</li>
-						</ul>
+					<div class="img-container col-md-8 col-md-offset-2">
+						<img src="assets/images/product.jpg" class="img-responsive" alt="Full fridge: Прямуй до довершеності. Не витрачай свій час на зайве.">
 					</div>
 				</div>
 			</div>
 		</section><!-- End #gains -->
 
-		<div class="bg-gray container-fluid">
+		<!-- <div class="bg-gray container-fluid">
 			<section class="container" id="poll">
 				<h2 class="text-center">Дайте собі відповідь на запитання:</h2>
 				<ol class="poll-list col-md-8 col-md-offset-2">
@@ -89,13 +83,18 @@
 						<h3>Сьогодні час - це гроші. Яку цінність має година вашого часу?</h3>
 						<p class="text-center text-gray">(500-700$ на міс. - приблизно 100грн. годину) </p>
 						<p><b>Допишіть 0 до цієї цифри</b> і дізнаєтесь скільки ТИСЯЧ гривень коштує “задоволення” від поїздок в супермаркети та магазини, адже в середньому ми витрачаємо на це 8-10 год. в тиждень.</p>
+						<form onsubmit="return false"> 
+						    Якщо я заробляю <input value="20000" id="costMonth" autocomplete="off"> грн. за місяць то за годину це виходить приблизно <b id="costHour">100</b>грн. <br>
+						    Отже ціна "задоволення" від поїздок в супермаркети та магазини <b id="costWeek">800-1000</b>грн. в тиждень,
+						    адже в середньому ми витрачаємо на це 8-10 год.
+						</form>
 					</li>
 					<li>
 						<h3>Чи є у вас справи якими приємно займатись, але на які часто не вистачає часу?</h3>
 						<h4>Наприклад:</h4>
 						<ul class="poll-sublist">
 							<li>Сходити на футбол, у спортзал, в кіно</li>
-							<li>Сходити на побачення чи зустрітися з друзями</li>
+							<li>Сходити на побачення чи спілкуватися з рідними та блиськими з друзями</li>
 							<li>Сходити в салон краси, на масаж, на йогу</li>
 							<li>Розслабитись чи помедитувати</li>
 							<li>Просто почитати книгу чи пограти у відео-ігри</li>
@@ -104,9 +103,123 @@
 						</ul>
 					</li>
 				</ol>
-			</section><!-- End #pull -->
+			</section>End #pull
+		</div> -->
+
+		<section class="text-center container-fluid" id="what">
+			<h2>Звільни 7-10 годин <br class="visible-xs">на тиждень</h2>
+			<!-- <p>Щотижня - нове меню.</p> -->
+			<ul class="what-list container">
+				<li class="col-md-4">
+					<div class="what-item">
+						<div class="img-container">
+							<img src="assets/images/what/list.svg" class="img-responsive" alt="Full Fridge: Рецепти">
+						</div>
+						<h3>Отримайте рецепти</h3>
+						<p>Придумаємо вам меню</p>
+					</div>
+				</li>
+				<li class="col-md-4">
+					<div class="what-item">
+						<div class="img-container">
+							<img src="assets/images/what/groceries.svg" class="img-responsive" alt="Full Fridge: Рецепти">
+						</div>
+						<h3>Отримайте інгрідієнти</h3>
+						<p>Сходимо за вас в магазини</p>
+					</div>
+				</li>
+				<li class="col-md-4">
+					<div class="what-item">
+						<div class="img-container">
+							<img src="assets/images/what/stew.svg" class="img-responsive" alt="Full Fridge: Рецепти">
+						</div>
+						<h3>Приготуйте їжу за 30 хв.</h3>
+						<p>Звільни час на важливі справи</p>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+		<div class="bg-black container-fluid" id="cost">
+			<div class="row">
+				<section class="container">
+					<h2 class="text-center">Скільки це коштує?</h2>
+					<ul class="cost-list text-center col-md-10 col-md-offset-1">
+						<li class="col-md-4">
+							<div class="cost-item">
+								<span class="cost_num">450 грн.</span>
+								<h3>Пробна доставка</h3>
+								<p>Їжі вистачить на 3 дні. Маєте змогу оцінити наш сервіс.</p>
+							</div>
+						</li>
+						<li class="col-md-4">
+							<div class="cost-item">
+								<span class="cost_num">1250 грн.</span>
+								<h3>Стандартний набір</h3>
+								<p>Їжі вистачить на тиждень. Нове меню щотижня.</p>
+							</div>
+						</li>
+						<li class="col-md-4">
+							<div class="cost-item">
+								<span class="cost_num img-container">
+									<img src="assets/images/operator.svg" class="img-responsive" alt="Full fridge: Персональний набір">
+								</span>
+								<h3>Персональний набір</h3>
+								<p>Оберіть лише ті продукти, які вам потрібні.</p>
+							</div>
+						</li>
+					</ul>
+					<div class="btn-container text-center col-md-12">
+						<button class="btn" type="button" data-toggle="modal" data-target="#ModalForm" onclick="changeFormTypeValue('cost')">Оформити замовлення</button>
+					</div>
+				</section>
+			</div>
 		</div>
-			
+
+		<section class="bg-gray container-fluid" id="responds">
+			<h2 class="text-center">Вже користуються нашими послугами</h2>
+			<div class="row">
+				<ul class="container responds-list">
+					<li class="col-md-4">
+						<div class="respond-item">
+							<div class="img-container">
+								<img src="assets/images/responds/andrew.jpg" class="img-responsive" alt="Full fridge: Відгуки - Андрій">
+							</div>
+							<h3 class="text-center">Лише вечері *<br>
+							1 людина</h3>
+							<p class="text-center">Андрій Прокопчук (підприємець)<br>
+							<a href="https://www.facebook.com/sergeevichdron?fref=ts" target="_blank">FB</a></p>
+							<p><i>"Я холостяк, і питання харчування для мене було непотрібним головним болем. Разом з тим, я розумів яким важливим є повноцінний раціон і своєчасне харчування."</i></p>
+						</div>
+					</li>
+					<li class="col-md-4">
+						<div class="respond-item">
+							<div class="img-container">
+								<img src="assets/images/responds/oksana.jpg" class="img-responsive" alt="Full fridge: Відгуки - Андрій">
+							</div>
+							<h3 class="text-center">Триразове харчування *<br>
+							2 людини</h3>
+							<p class="text-center">Оксана Хуторцова (лікар)<br>
+							<a href="https://www.facebook.com/oksana.hutortsova?fref=ts" target="_blank">FB</a></p>
+							<p><i>"Все дуже сподобалось! Нам з дочкою вистачило їжі якраз рівно на 7 днів. Все дуже смачно! Класно, що не потрібно вигадувати меню на кожен день і витрачати час на магазини."</i></p>
+						</div>
+					</li>
+					<li class="col-md-4">
+						<div class="respond-item">
+							<div class="img-container">
+								<img src="assets/images/responds/yulia.jpg" class="img-responsive" alt="Full fridge: Відгуки - Андрій">
+							</div>
+							<h3 class="text-center">Сніданки та вечері *<br>
+							1 людина</h3>
+							<p class="text-center">Юлия Сологуб (менеджер)<br>
+							<a href="https://www.facebook.com/ula.hytortsova.1?pnref=lhc.friends" target="_blank">FB</a></p>
+							<p><i>"Це рятунок! Додому з роботи повертаюся пізно ввечері і зовсім не хочеться придумувати собі меню та іти в магазин. З Full Fridge у мене тепер завжди є їжа і час."</i></p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
 		<section class="container" id="products">
 			<h2 class="text-center">Які продукти ми доставдляємо?</h2>
 			<ul class="products-list col-md-10 col-md-offset-1">
@@ -165,88 +278,23 @@
 					</div>
 				</li>
 			</ul>
-			<div class="col-md-6 col-md-offset-3" style="margin-top: 30px; margin-bottom: 30px;">
-				<h4 class="text-center">Усі продукти доставляються свіжими і мають термін придатності принаймні 1 тиждень.</h4>
+			<div class="products_fresh col-md-8 col-md-offset-2">
+				<div class="row">
+					<h4 class="text-center">Усі продукти доставляються свіжими і мають термін придатності щонайменше 1 тиждень.</h4>
+				</div>
 			</div>
 		</section><!-- End products -->
 
-		<div class="container-fluid" id="cost">
-			<div class="row">
-				<section class="container">
-					<h2 class="text-center">Скільки це коштує?</h2>
-					<ul class="cost-list text-center col-md-10 col-md-offset-1">
-						<li class="col-md-4">
-							<div class="cost-item">
-								<span>450 ₴</span>
-								<h3>Пробна доставка</h3>
-								<p>Їжі вистачить на 3 дні</p>
-								<button class="btn" type="button" data-toggle="modal" data-target="#ModalForm" onclick="changeFormTypeValue('try')">Спробувати</button>
-							</div>
-						</li>
-						<li class="col-md-4">
-							<div class="cost-item">
-								<span>1250 ₴</span>
-								<h3>Стандартний набір</h3>
-								<p>Їжі вистачить на тиждень.</p>
-								<button class="btn" type="button" data-toggle="modal" data-target="#ModalForm" onclick="changeFormTypeValue('default')">Дізнатись меню</button>
-							</div>
-						</li>
-						<li class="col-md-4">
-							<div class="cost-item">
-								<span class="img-container">
-									<img src="assets/images/settings.svg" class="img-responsive" alt="Full fridge: Персональний набір">
-								</span>
-								<h3>Персональний набір</h3>
-								<p style="line-height: 24px">Оберіть лише ті продукти, які вам потрібно.</p>
-								<button class="btn" type="button" data-toggle="modal" data-target="#ModalForm" onclick="changeFormTypeValue('custom')">Зв'язатися з нами</button>
-							</div>
-						</li>
-					</ul>
-				</section>
-			</div>
-		</div>
-
-		<section class="bg-gray container-fluid" id="responds">
-			<h2 class="text-center">Вже користуються нашими послугами</h2>
-			<div class="row">
-				<ul class="container responds-list">
-					<li class="col-md-4">
-						<div class="respond-item">
-							<div class="img-container">
-								<img src="assets/images/responds/andrew.jpg" class="img-responsive" alt="Full fridge: Відгуки - Андрій">
-							</div>
-							<h3 class="text-center">Лише вечері *<br>
-							1 людина</h3>
-							<p class="text-center">Андрій Прокопчук (підприємець)<br>
-							<a href="https://www.facebook.com/sergeevichdron?fref=ts" target="_blank">FB</a></p>
-							<p><i>"Так як я холостяк, питання харчування для мене було непотрібним головним болем. ..."</i></p>
-						</div>
-					</li>
-					<li class="col-md-4">
-						<div class="respond-item">
-							<div class="img-container">
-								<img src="assets/images/responds/oksana.jpg" class="img-responsive" alt="Full fridge: Відгуки - Андрій">
-							</div>
-							<h3 class="text-center">Триразове харчування *<br>
-							2 людини</h3>
-							<p class="text-center">Оксана Хуторцова (лікар)<br>
-							<a href="https://www.facebook.com/oksana.hutortsova?fref=ts" target="_blank">FB</a></p>
-							<p><i>"Так як я холостяк, питання харчування для мене було непотрібним головним болем. ..."</i></p>
-						</div>
-					</li>
-					<li class="col-md-4">
-						<div class="respond-item">
-							<div class="img-container">
-								<img src="assets/images/responds/yulia.jpg" class="img-responsive" alt="Full fridge: Відгуки - Андрій">
-							</div>
-							<h3 class="text-center">Сніданки та вечері *<br>
-							1 людина</h3>
-							<p class="text-center">Юлия Сологуб (менеджер)<br>
-							<a href="https://www.facebook.com/ula.hytortsova.1?pnref=lhc.friends" target="_blank">FB</a></p>
-							<p><i>"Так як я холостяк, питання харчування для мене було непотрібним головним болем. ..."</i></p>
-						</div>
-					</li>
-				</ul>
+		<section class="bg-black text-center container-fluid" id="try">
+			<h2>Замовте пробну доставку</h2>
+			<p>Їжі вистачить на 3 дні. Маєте змогу оцінити наш сервіс.</p>
+			<div id="TryForm">
+				<form action="mail.php">
+					<input type="text" name="name" placeholder="Ім'я" required>
+					<input type="tel" name="phone" placeholder="Номер телефону" required>
+					<input type="text" name="type" class="hidden" value="try">
+					<button type="submit" class="btn">Замовити</button>
+				</form>
 			</div>
 		</section>
 
@@ -275,7 +323,7 @@
 					</a>
 					<div class="panel-collapse collapse" id="faq2">
 						<div class="txt-container">
-							<p>Персональна їжа - це коли ми не тільки ходимо за вас в магазин і чистимо картоплю, а й підбираємо меню, яке буде смачним саме для вас.</p>
+							<p>Персональна їжа - це коли ми не тільки ходимо за вас в магазин<!--  і чистимо картоплю -->, а й підбираємо меню, яке буде смачним саме для вас.</p>
 
 							<p>Як це працює: <br>
 							1) Ви вказуєте, які продукти ви не їсте <br>
@@ -293,7 +341,7 @@
 					</a>
 					<div class="panel-collapse collapse" id="faq3">
 						<div class="txt-container">
-							<p><a href="#">Зареєстріруйтеся тут</a>, і ми відправимо актуальне меню вам на пошту.</p>
+							<p><a href type="button" data-toggle="modal" data-target="#ModalForm" onclick="changeFormTypeValue('faq')">Зареєстріруйтеся тут</a>, і ми відправимо актуальне меню вам на пошту.</p>
 						</div>
 					</div>
 				</li>
@@ -326,6 +374,21 @@
 						</div>
 					</div>
 				</li>
+				<li>
+					<a data-toggle="collapse" href="#faq6">
+						<span>Яким чином проводиться оплата?</span>
+						<div class="close-icon">
+							<img src="assets/images/cancel.svg" class="img-responsive" alt="Full Fridge: cancel">
+						</div>
+					</a>
+					<div class="panel-collapse collapse" id="faq6">
+						<div class="txt-container">
+							<p>Оплата відбувається двома способами:<br>
+							1. Під час отримання продуктів через кур'єра<br>
+							2. Переведення коштів на банківський рахунок</p>
+						</div>
+					</div>
+				</li>
 			</ol>
 		</section>
 			
@@ -333,24 +396,22 @@
 
 	<footer id="footer" class="container-fluid">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
+			<div class="row" style="position: relative;">
+				<div class="col-md-6" style="position: static;">
 					<ul class="contacts-list">
-						<li><a href="#">Facebook</a></li>
-						<li><a href="#">Vkontakte</a></li>
-						<li></li>
-						<li>+38 (063) 170 47 05</li>
+						<!-- <li>(068) 460 45 96</li> -->
 						<li><a href="mailto:support@fullfridge.com.ua">support@fullfridge.com.ua</a></li>
 					</ul>
 				</div>
 				<div class="col-md-6">
-					<div class="footer-form">
+					<div class="footer-form" id="FooterForm"">
 						<h3>Залишились запитання?</h3>
 						<p class="text-gray">Залиште ваш номер телефону, і ми зв'яжемось з вами найближчим часом</p>
 						<form action="mail.php">
-							<input type="tel" placeholder="Номер телефону *" required>
+							<input type="tel" name="phone" placeholder="Номер телефону *" required>
 							<textarea name="message" placeholder="Запитання"></textarea>
-							<button class="btn" type="submit">Задати питання</button>
+							<input type="text" name="type" class="hidden" value="form">
+							<button class="btn" type="submit">Отримати консультацію</button>
 						</form>
 					</div>
 				</div>
@@ -365,15 +426,23 @@
 		<div class="form-modal modal-dialog modal-md">
 			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 			<h3>Оформлення доставки</h3>
-			<p class="text-gray">Залиште ваші дані, і ми зв'яжемось з вами найближчим часом</p>
+			<p class="text-gray">Залиште ваші дані, і ми зв'яжемось з вами найближчим часом.</p>
 			<form action="mail.php">
 				<input type="text" name="name" placeholder="Ім'я' *" required>
 				<input type="tel" name="phone" placeholder="Номер телефону *" required>
 				<input type="email" name="email" placeholder="Email">
 				<textarea name="message" placeholder="Короткий опис"></textarea>
 				<input type="text" name="type" class="hidden" value="" id="ModalFormType">
-				<button class="btn" type="submit">Задати питання</button>
+				<button class="btn" type="submit">Відправити заявку</button>
 			</form>
+		</div>
+	</div>
+
+	<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="ModalThx">
+		<div class="modal-dialog modal-md bg-wite text-center">
+			<h3>Дякуємо за заявку.</h3>
+			<p>Ми зв'яжемось з вами найближчим часом.</p>
+			<button type="button" class="btn" data-dismiss="modal" aria-hidden="true">Ок</button>
 		</div>
 	</div>
 <!-- </div> -->

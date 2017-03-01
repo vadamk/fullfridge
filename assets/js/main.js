@@ -1,115 +1,161 @@
-var navbarHeight = 50;
+// $(document).ready(function() {
+//     var slideout = new Slideout({
+//         'panel': document.getElementById('wrap'),
+//         'menu': document.getElementById('nav'),
+//         'side': 'right',
+//     });
 
-$(function() {
+//     $(".navbar-toggle").click(function(event) {
+//     	slideout.toggle();
+//     });
 
-	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
-});
+//     // temp
 
-$(document).ready(function() {
-			// $("#ModalThx").modal('show');
-	// CostCalc();
-});
+//     $('#basic').magnificPopup();
+//     $('#basic').trigger( "click" );
+// });
 
-$("#ModalForm form").submit(function() { //Change
-	var th = $(this);
-	var vals = th.serializeArray();
+// Edit Phone numbers
+function EditModalStyling(ModalTitle) {
+    
+    // Manual properties list
+    $.getJSON('FieldManualProp.json', function(data) {
+        
+        var Modal = $("#ajaxFormDiv");
 
-	if (vals[0].value != "" && vals[1].value != "" && vals[2].value != "") {
-	
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize(),
-		}).done(function() {
-			th[0].reset();
-			$("#ModalForm").modal('hide');
-			$("#ModalThx").modal('show');
-		});
-	} else {
-		alert("Будь ласка заповніть обов'язкові поля.")
-	}
+        var ModalContainer =  $(document.createElement("div"));
+        ModalContainer.attr("class", "modal_container");
+        ModalContainer.append(Modal.html());
 
-  return false;
-});
+        Modal.html("");
+        Modal.append(ModalContainer)
 
-$("#FooterForm form").submit(function() { //Change
-	var th = $(this);
-	var vals = th.serializeArray();
+        var ModalForm = Modal.find('form');
 
-	if (vals[0].value != "") {
+        var FieldManualPropList = data;
 
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize(),
-		}).done(function() {
-			th[0].reset();
-			$("#ModalThx").modal('show');
-		});
-	} else {
-		alert("Будь ласка заповніть обов'язкові поля.")
-	}
+        // Go through all fields modal form and save each of them
+        var FieldList = {};
+        ModalForm.find('select, input:not([type=submit])').each(function() {
+            
+            var th = $(this);
+            
+            // Default values for manual properties 
+            var FieldLabel = "";
+            var FieldPlaceholder = "";
+            var FieldCollWidth = 12;
 
-  return false;
-});
+            if (th.attr('name') in FieldManualPropList) {
+                var FieldLabel = FieldManualPropList[th.attr('name')].label;
+                var FieldPlaceholder = FieldManualPropList[th.attr('name')].placeholder;
+                var FieldCollWidth = FieldManualPropList[th.attr('name')].collWidth;
+            }
 
-$("#TryForm form").submit(function() { //Change
-	var th = $(this);
-	var vals = th.serializeArray();
+            var OptionList = {};
+            if (th.prop("tagName") === "SELECT") {
+                OptionList = getOptionList(th);
+            }
 
-	if (vals[0].value != "" && vals[1].value != "") {
+            FieldList[th.attr('name')] = {
+                type: th.attr('type'),
+                value: th.attr('value'),
+                class: th.attr('class'),
+                id: th.attr('id'),
+                tagName: th.prop("tagName"),
+                label: FieldLabel,
+                placeholder: FieldPlaceholder,
+                collWidth: FieldCollWidth,
+                options: OptionList,
+            }
+        });
 
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize(),
-		}).done(function() {
-			th[0].reset();
-			$("#ModalThx").modal('show');
-		});
-	} else {
-		alert("Будь ласка заповніть обов'язкові поля.")
-	}
+        Modal.find('.modalClose').remove();
+        Modal.find('.clear').remove();
+        ModalForm.before('<h2 class="text-center">'+ModalTitle+'</h2>');
+        ModalForm.html('<div class="row"></div>'+
+                        '<div class="hidden_fields"></div>');
 
-  return false;
-});
+        for (var key in FieldList) {
+            
+            newInput =  $(document.createElement(FieldList[key].tagName));
+            newInput.attr({
+                name: key,
+                type: FieldList[key].type,
+                value: FieldList[key].value,
+                class: FieldList[key].class,
+                placeholder: FieldList[key].placeholder,
+            });
 
-$('.faq-list li .collapse').on('show.bs.collapse', function () {
-  $('.faq-list li a[href=#'+$(this).attr("id")+'] .close-icon').addClass('open')
-})
+            // Check if FIELD - SELECT
+            if (FieldList[key].tagName === "SELECT") {
+                for (var optKey in FieldList[key].options) {
 
-$('.faq-list li .collapse').on('hide.bs.collapse', function () {
-  $('.faq-list li a[href=#'+$(this).attr("id")+'] .close-icon').removeClass('open')
-})
+                    newOption = $(document.createElement('option'));
+                    newOption.text(optKey);
+                    newOption.attr("value", FieldList[key].options[optKey].value);
+                    
+                    if (FieldList[key].options[optKey].selected) {
+                        newOption.attr("selected", "selected");
+                    }
+                    
+                    newInput.append(newOption);
+                }
+            }
 
-// $("#costMonth").keyup(CostCalc);
+            // Check if FIELD - HIDDEN
+            if (FieldList[key].type != "hidden") {
 
-// function CostCalc() {
-// 	var costMonth = document.getElementById("costMonth").value;
-// 	var costHour = Math.round(parseInt(costMonth, 10)/22/8);
-// 	var costWeek = Math.round(costHour*8)+"-"+Math.round(costHour*10);
-// 	document.getElementById('costHour').innerHTML = costHour;
-// 	document.getElementById('costWeek').innerHTML = costWeek;
-// };
+                newField = $(document.createElement('div'));
 
-function changeFormTypeValue(v) {
-	document.getElementById('ModalFormType').value = v;
+                // Check if label is EXISTS
+                if (FieldList[key].label != "") {
+                    newFieldLabel =  $(document.createElement("label"));
+                    newFieldLabel.attr('for', key);
+                    newFieldLabel.text(FieldList[key].label);
+                    
+                    newFieldCaption =  $(document.createElement("div"));
+                    newFieldCaption.attr('class', 'field_caption col-md-12');
+                    newFieldCaption.append(newFieldLabel);
+                    
+                    ModalForm.find('.row').append(newFieldCaption);
+                }
+                  
+                newField.append(newInput);
+                newField.attr('class', 'field col-md-'+FieldList[key].collWidth);
+            
+                ModalForm.find('.row').append(newField);
+            } else {
+                ModalForm.find('.hidden_fields').append(newInput);
+            }
+        }
+
+        var ModalButtons = '<div class="modal_buttons col-md-12 text-right">'+    
+                                '<a class="btn btn-close" href="javascript:closeAjaxForm();">Close</a>'+
+                                '<input type="submit" class="btn" value="Submit">'+
+                            '</div>';
+
+        ModalForm.find('.row').append(ModalButtons);
+        Modal.show();
+    });
 }
 
-$(document).on("click", ".btn-clear", function(e) {
+function getOptionList(Select) {
+    var Options = {};
 
-	e.preventDefault();
+    Select.find('option').each(function() {
+        var th = $(this);
 
-	var speed = 600;
-	var target = $(this).attr("href");
-	var st = $(target).offset().top - navbarHeight;
+        if (th.attr('selected') === "selected") {
+            var optionSelected = true;
+        } else {
+            var optionSelected = false
+        }
+        
+        Options[th.text()] = {
+            selected: optionSelected,
+            value: th.attr('value'),
+        }
+    });
 
-	$('html,body').stop().animate({scrollTop: st}, speed);
-});
-
-$(window).load(function() {
-
-	$(".loader_inner").fadeOut();
-	$(".loader").delay(400).fadeOut("slow");
-
-});
+    return Options;
+}
